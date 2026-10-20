@@ -25,6 +25,36 @@ and do not need to be served (harmless if they are).
 
 ## Unreleased
 
+### Saturday 1pm becomes "Selling to the Government", with Ian Quan
+The 1:00 pm workshop is retitled **Selling to the Government: A Hands-On
+Workshop** and its blurb replaced with the committee's wording, which names
+**Apex Accelerator (Ian Quan)** alongside Hussain Ezzy, Fakhruddin Cutlerywala
+and Huzaifa Hussain. Ian Quan joins the agenda row and the speaker grid, the
+four cards now read "Selling to the Government" as their session, and the
+hero's speaker count moves from 14 to 15.
+
+### Raffles and Networking Bingo close both days
+The 3:00 pm slot on Saturday and Sunday was "Programme to be announced"; the
+committee confirmed raffles and the networking bingo run both days, so each
+now carries that title and a one-line note.
+
+### Five portraits, supplied by the committee
+`img/speaker-saba-haider.jpg` and `img/speaker-ian-quan.jpg` &mdash; the markup
+already pointed at these filenames, so the avatars pick them up with no other
+change. Ian Quan's source is only 147px wide and renders soft in the 64px card
+until a larger file arrives. The three guests of honour who were on initials
+&mdash; Dr. M. Anand Prakash, Zaman Mehdi and John Curran &mdash; now have
+`img/guest-*.jpg` portraits cropped to the same 369&times;420 frame as the two
+House portraits. Saba Haider's cut-out arrived on solid black; the background
+was flood-filled to a pale lavender so the circle has no dark corners.
+
+### Sunday keynote badge
+"Speaker announced soon" becomes **"Speaker to be announced"**.
+
+Mirrors the same changes made to the event page on tr.chicagojamaat.org
+(ASCChicago/tr-react-app PR #39, live 20 Oct 2026). Deploy: `index.html` plus
+the five new files in `img/`.
+
 ### The Saturday keynote gets a promo band, and Abidali a portrait
 The committee's own social card for the keynote now runs as a band straight
 after the programme, so it lands on a reader who has just passed the 11:00 am
