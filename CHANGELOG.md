@@ -25,6 +25,13 @@ and do not need to be served (harmless if they are).
 
 ## Unreleased
 
+### Three more portraits, and Yusuf Hakim joins the roster
+`img/speaker-abdeali-nagarwala.jpg` and `img/speaker-alifya-kagalwala.jpg`
+(the AI panel, 27 Oct; the markup already pointed at these names). **Yusuf
+Hakim** gets a speaker card with `img/speaker-yusuf-hakim.jpg` &mdash; he is not
+yet on a session, so his card reads "Session to be announced" until the
+committee places him. Hero speaker count 15 &rarr; 16.
+
 ### Xcelacore AI's description, and links for Emrixtech and Cysora
 **Xcelacore AI** gets a description — the company's own wording, supplied by
 its owner, so it is the one blurb on this page that is not a neutral summary
