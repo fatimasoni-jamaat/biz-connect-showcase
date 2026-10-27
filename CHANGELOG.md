@@ -25,6 +25,14 @@ and do not need to be served (harmless if they are).
 
 ## Unreleased
 
+### Raffle ticket with every registration
+The Attendee card's "Your pass includes" list gains **"Automatic, exclusive
+raffle ticket (prizes include big-screen TV, iPad, and more!)"**, and the
+registration lede adds "Your registration includes an exclusive raffle ticket
+(prizes include big-screen TV, iPad, and more!)". Wording from the committee,
+27 Oct. The same line was asked for inside the JotForm itself, under the
+over-16 notice &mdash; that has to be added on JotForm.
+
 ### Xcelacore AI's description, and links for Emrixtech and Cysora
 **Xcelacore AI** gets a description — the company's own wording, supplied by
 its owner, so it is the one blurb on this page that is not a neutral summary
