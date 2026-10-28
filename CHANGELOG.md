@@ -25,6 +25,29 @@ and do not need to be served (harmless if they are).
 
 ## Unreleased
 
+### Raffle ticket, AI panel portraits, and Yusuf Hakim
+Carried across from the Jamaat-portal version, where both shipped on 27
+October. This page had neither.
+
+**Every registration includes a raffle ticket.** Committee wording: a fifth
+line on the Attendee pass list, and a sentence in the registration lede —
+"prizes include big-screen TV, iPad, and more!". The committee also wants that
+sentence inside the JotForm, under the over-16 notice; that lives on JotForm,
+not here.
+
+**Portraits for Abdeali Nagarwala and Alifya Kagalwala.** Both were already
+referenced by the AI-panel avatars and speaker cards, which fell back to
+initials because the files were missing — so adding the files was the whole
+change.
+
+**Yusuf Hakim joins the speaker grid**, taking the count from 15 to 16. He has
+no slot yet, so his card reads "Session to be announced" and he is deliberately
+absent from every agenda lineup: a speaker on the grid with no session is
+honest, a speaker in the wrong session is not. His avatar tint matches the one
+the React page's rotation assigns him at index 15 — keep the two in step.
+
+Deploy: copy `index.html` and `img/`.
+
 ### Cysora's logo, and a dark tile for white logos
 Cysora's mark is drawn in white — `fill="white"`, nothing else — which is what
 a company uses on its own dark header, and which renders as an **empty box** on
