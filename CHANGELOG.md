@@ -25,6 +25,26 @@ and do not need to be served (harmless if they are).
 
 ## Unreleased
 
+### Cysora's logo, and a dark tile for white logos
+Cysora's mark is drawn in white — `fill="white"`, nothing else — which is what
+a company uses on its own dark header, and which renders as an **empty box** on
+this grid's white slot. It is the third exhibitor to supply one, after Kettle &
+Oak and Smooth Solutions, so it is worth handling rather than working around.
+
+Recolouring somebody's logo is not ours to do, so the **backing** changes
+instead: the card swaps its white tile for the violet tint it already carries.
+Every tint clears 5:1 against white.
+
+One trap found in the first render: the `<img>` backing has to become the tint
+too, not `transparent`. The monogram sits underneath every logo as the
+missing-file fallback, and a see-through image let the "CY" show through the
+mark. Matching the tile hides it while keeping the fallback — a failed load
+still hides the image and uncovers the letters as intended.
+
+**15 logos, 17 links** across 54 exhibitors.
+
+Deploy: copy `index.html` and `img/`.
+
 ### Xcelacore AI's description, and links for Emrixtech and Cysora
 **Xcelacore AI** gets a description — the company's own wording, supplied by
 its owner, so it is the one blurb on this page that is not a neutral summary
