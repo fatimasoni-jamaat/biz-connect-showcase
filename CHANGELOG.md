@@ -25,6 +25,30 @@ and do not need to be served (harmless if they are).
 
 ## Unreleased
 
+### Sunday's keynote is Abeezar Tybejee
+The Sunday 11:00 slot read "Keynote Open" in the committee's draft — a keynote
+with no session and no speaker — and this page carried it as a pending card
+with no invented title. The committee confirmed him on 31 October.
+
+**Both days now run a CEO Stories keynote at 11:00.** That is the committee's
+own framing, not a duplicated row, and the session line is theirs verbatim:
+"Prominent CEOs share their journeys and learnings — so you don't make the same
+mistake."
+
+**Abeezar Tybejee, CEO, Shipcom Wireless**, with his portrait. Speakers 16 →
+17. He is the only speaker carrying a bio: Abidali's standing is made by the
+promo band with his artwork and a Register CTA, and Abeezar has no artwork, so
+his case has to be made in words. A bio under every name would turn a scannable
+grid into an essay.
+
+His card is last in the grid rather than beside Abidali's. `.spk-card.key`
+takes a full-width row wherever it falls, so Saturday's keynote opens the grid
+and Sunday's closes it — and the React page assigns avatar tints by position,
+where inserting him second would move 15 of 16 existing speakers onto new
+tints, every one hand-written twice here.
+
+Deploy: copy `index.html` and `img/`.
+
 ### Raffle ticket, AI panel portraits, and Yusuf Hakim
 Carried across from the Jamaat-portal version, where both shipped on 27
 October. This page had neither.
