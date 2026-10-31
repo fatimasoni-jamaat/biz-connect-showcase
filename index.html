@@ -422,6 +422,10 @@ section{scroll-margin-top:calc(var(--parent-nav-h) + 78px)}
 .spk-card.key .spk-card-av{width:96px;height:96px;font-size:1.7rem}
 .spk-card.key h4{font-size:clamp(1.25rem,2.6vw,1.55rem)}
 .spk-card.key .spk-title{font-size:.92rem;max-width:62ch}
+/* only on the keynote card that has no artwork. capped at 70ch: the card spans
+   the full grid width, and a 110-word paragraph running the whole way across a
+   desktop viewport is a line nobody tracks back from. */
+.spk-bio{font-size:.86rem;color:var(--ink-2);line-height:1.55;margin-top:.7rem;max-width:70ch}
 .key-badge{display:inline-block;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--gold);border:1px solid var(--gold-line);padding:.18rem .55rem;border-radius:2px;margin-bottom:.5rem}
 @media (max-width:560px){.spk-card.key .spk-card-av{width:72px;height:72px;font-size:1.3rem}}
 /* Heads the timetable. Was .lineup-lead — a .74rem uppercase label reading
@@ -788,7 +792,7 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
            the page. The import script prints this count every run — keep both
            this tile and the proof bullet below in step with it. -->
       <li><svg class="ic" aria-hidden="true"><use href="#i-store"></use></svg><b>54</b><span class="g-l">Exhibitors</span><span class="g-s">Signed so far, more to come</span></li>
-      <li><svg class="ic" aria-hidden="true"><use href="#i-users"></use></svg><b>16</b><span class="g-l">Speakers</span><span class="g-s">Confirmed so far, more to come</span></li>
+      <li><svg class="ic" aria-hidden="true"><use href="#i-users"></use></svg><b>17</b><span class="g-l">Speakers</span><span class="g-s">Confirmed so far, more to come</span></li>
       <li><svg class="ic" aria-hidden="true"><use href="#i-mic"></use></svg><b>8</b><span class="g-l">Sessions</span><span class="g-s">Plus two keynotes</span></li>
       <li><svg class="ic" aria-hidden="true"><use href="#i-ticket"></use></svg><b>Free</b><span class="g-l">Entry</span><span class="g-s">Pre-registration required</span></li>
     </ul>
@@ -994,10 +998,17 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
           <span class="spk"><span class="spk-av" data-i="AN"><img src="img/speaker-abidali-neemuchwala.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Abidali Neemuchwala<small>Tech Investor and Ex-CEO Wipro</small></span></span>
         </div>
       </article>
+      <!-- Read "Keynote Open" in the committee's draft — a keynote slot with
+           no session and no speaker — until 31 Oct, when Abeezar Tybejee was
+           confirmed. Both days now run a CEO Stories keynote at 11:00; that is
+           the committee's own framing, not a duplicated row. -->
       <article class="sess keynote rv">
         <p class="sess-when">Sunday 6 December</p>
-        <p class="sess-time">Keynote</p>        <h4>Keynote</h4>
-        <p class="sess-tba"><span class="soon">Speaker to be announced</span></p>
+        <p class="sess-time">Keynote</p>        <h4>CEO Stories</h4>
+        <p class="sess-note">Prominent CEOs share their journeys and learnings &mdash; so you don&rsquo;t make the same mistake.</p>
+        <div class="spk-row">
+          <span class="spk"><span class="spk-av" data-i="AT" style="--av-tint:#4a2470"><img src="img/speaker-abeezar-tybejee.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Abeezar Tybejee<small>CEO, Shipcom Wireless</small></span></span>
+        </div>
       </article>
       <p class="sched-hour">12:00 pm</p>
       <article class="sess rv">
@@ -1137,6 +1148,20 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
       <article class="spk-card">
         <span class="spk-card-av" data-i="YH" style="--av-tint:#6b2f9e"><img src="img/speaker-yusuf-hakim.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
         <div class="spk-card-body"><h4>Yusuf Hakim</h4><p class="spk-session">Session to be announced</p></div>
+      </article>
+      <!-- Sunday's keynote, confirmed 31 Oct. Last in the grid rather than
+           beside Abidali because .spk-card.key takes a full-width row wherever
+           it falls, so Saturday's keynote opens the grid and Sunday's closes
+           it — and because the React page assigns avatar tints by position,
+           where inserting him second would reshuffle 15 of 16 existing
+           speakers onto new tints, every one of them hand-written twice here.
+
+           He is the only speaker with a bio: Abidali's standing is made by the
+           promo band with his artwork and a Register CTA, and Abeezar has no
+           artwork, so his case has to be made in words. -->
+      <article class="spk-card key">
+        <span class="spk-card-av" data-i="AT" style="--av-tint:#4a2470"><img src="img/speaker-abeezar-tybejee.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="spk-card-body"><p class="key-badge">Keynote</p><h4>Abeezar Tybejee</h4><p class="spk-title">CEO, Shipcom Wireless</p><p class="spk-session">CEO Stories</p><p class="spk-bio">With over 23 years of experience in startups, the Department of Defense and business development, Abeezar has built Shipcom into a trusted partner for agencies including the US Marines, US Navy, DHS, FEMA and more. Their flagship Shipcom AI platform powers the $14 billion supply chain of the US Navy&rsquo;s DDG 51 Class Aegis Program, ensures IoT logistics and cybersecurity for DHS-CBP operations on the US Southern Border, and supports FEMA&rsquo;s emergency supply chain needs.</p></div>
       </article>
     </div>
 
