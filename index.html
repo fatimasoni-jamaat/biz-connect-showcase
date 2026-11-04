@@ -452,17 +452,23 @@ section{scroll-margin-top:calc(var(--parent-nav-h) + 78px)}
 .sched-hour{font-family:"Marcellus",serif;font-size:1.05rem;color:var(--ink-3);padding-top:1.05rem;font-variant-numeric:tabular-nums;white-space:nowrap}
 .sched .sess{margin-bottom:0}
 .sched-blank{border:1px dashed var(--rule)}
-/* Day sits on the card only on mobile, where the rail is gone. */
+/* The hour sits on the card only on mobile, where the rail is gone. */
 .sess-when{display:none}
 @media (max-width:880px){
-  /* No room for a rail plus two columns. One column grouped BY HOUR: the rail
-     label becomes a row heading and each card names its day. Grouping by day
-     would need a different DOM order than the desktop grid. */
+  /* No room for a rail plus two columns. */
   .sched{grid-template-columns:1fr;row-gap:.75rem}
-  .sched-corner,.sched .sess-dayhead{display:none}
-  .sched-hour{padding-top:1.4rem;font-size:1.15rem;color:var(--violet);border-bottom:1px solid var(--rule);padding-bottom:.4rem}
-  .sess-when{display:block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--ink-3);margin-bottom:.3rem}
-  .sess.keynote .sess-when{color:#D9CCE6}
+  /* one column grouped BY DAY: all of Saturday, then all of Sunday.
+     interleaving the days hour by hour is right on a shared-axis grid and
+     nonsense read as a single column - 9am Sat, 9am Sun, 10am Sat - which is
+     what this used to do. `order` does it without a second DOM: --o is set per
+     cell in the markup as day*100 + hour. the rail goes, the hour moves onto
+     the card, and the day heading leads each group. */
+  .sched>*{order:var(--o,0)}
+  .sched-corner,.sched-hour,.sched-blank{display:none}
+  .sched .sess-dayhead{display:block;margin-top:1.6rem;padding-bottom:.5rem;border-bottom:1px solid var(--gold-line);color:var(--violet)}
+  .sched .sess-dayhead:first-of-type{margin-top:0}
+  .sess-when{display:block;font-family:"Marcellus",serif;font-size:.95rem;font-variant-numeric:tabular-nums;color:var(--violet);margin-bottom:.35rem}
+  .sess.keynote .sess-when{color:var(--hero-gold)}
 }
 .sess-dayhead{font-family:"Marcellus",serif;font-size:1.3rem;color:var(--violet);padding-bottom:.6rem;border-bottom:1px solid var(--rule);margin-bottom:0;align-self:end}
 .sess-dayhead small{display:block;font-family:"Archivo",sans-serif;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ink-3);margin-top:.35rem}
@@ -652,7 +658,16 @@ section{scroll-margin-top:calc(var(--parent-nav-h) + 78px)}
 /* centred, unlike the other bands: this reads as a dedication rather than a
    pitch, so there is no left edge for a CTA to line up against. */
 .platinum-head{text-align:center;max-width:54ch;margin-inline:auto}
-.platinum-head .eyebrow{justify-content:center}
+/* a badge, not a label. "Platinum sponsors" is the one line stating what the
+   tier is worth, and at the page's default eyebrow size it read as a caption
+   on the heading rather than a billing. the gold rule and tint borrow the
+   .key-badge treatment the keynote cards use - the page's existing language
+   for "this one is top of its class". */
+.platinum-head .eyebrow{justify-content:center;display:inline-flex;align-items:center;gap:.45rem;font-size:.78rem;letter-spacing:.22em;font-weight:700;color:var(--hero-gold);border:1px solid var(--gold-line);border-radius:999px;padding:.42rem 1.05rem;background:rgba(227,190,99,.09)}
+.platinum-head .eyebrow .ic{width:.95em;height:.95em;opacity:1}
+/* bigger than the other band headings: this one carries the band on its own,
+   with no body copy beside it and no CTA under it. */
+.platinum-head h2{font-size:clamp(2rem,4.4vw,3rem);margin-top:1rem;letter-spacing:-.01em}
 .platinum-head p{margin-inline:auto}
 .platinum-grid{list-style:none;margin:clamp(2rem,4vw,2.8rem) 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(12.5rem,1fr));gap:clamp(1rem,2.4vw,1.6rem)}
 .platinum-grid a{display:flex;flex-direction:column;align-items:center;gap:.75rem;text-decoration:none}
@@ -993,27 +1008,29 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
          days — the keynotes line up and 14 repeated time labels become 7. Two
          independent columns drifted: a one-line open slot opposite a
          four-speaker panel put the 11am keynotes ~150px apart.
-         Below 880px it collapses to one column grouped BY HOUR; each card
-         names its own day. -->
+         Below 880px it collapses to one column grouped BY DAY — all of
+         Saturday, then all of Sunday — via the --o order values on each cell.
+         Interleaving the days reads fine across a shared axis and is nonsense
+         down a single column. The rail goes and each card names its hour. -->
     <div class="sched">
       <p class="sched-corner" aria-hidden="true"></p>
-      <p class="sess-dayhead">Saturday 5 December<small>8:30am &ndash; 3:30pm</small></p>
-      <p class="sess-dayhead">Sunday 6 December<small>8:30am &ndash; 3:30pm</small></p>
+      <p class="sess-dayhead" style="--o:0">Saturday 5 December<small>8:30am &ndash; 3:30pm</small></p>
+      <p class="sess-dayhead" style="--o:100">Sunday 6 December<small>8:30am &ndash; 3:30pm</small></p>
       <p class="sched-hour">9:00 am</p>
-      <article class="sess rv">
-        <p class="sess-when">Saturday 5 December</p>        <h4>Networking and Welcome</h4>
+      <article class="sess rv" style="--o:1">
+        <p class="sess-when">9:00 am</p>        <h4>Networking and Welcome</h4>
       </article>
-      <article class="sess rv">
-        <p class="sess-when">Sunday 6 December</p>        <h4>Networking and Welcome</h4>
+      <article class="sess rv" style="--o:101">
+        <p class="sess-when">9:00 am</p>        <h4>Networking and Welcome</h4>
       </article>
       <p class="sched-hour">10:00 am</p>
-      <article class="sess rv">
-        <p class="sess-when">Saturday 5 December</p>        <h4>Founder Stories Roundtable</h4>
+      <article class="sess rv" style="--o:2">
+        <p class="sess-when">10:00 am</p>        <h4>Founder Stories Roundtable</h4>
         <p class="sess-note">Four business owners from Chicago share their entrepreneurial journey &mdash; the highs and the lows.</p>
         <p class="sess-tba">Speakers to be announced.</p>
       </article>
-      <article class="sess rv">
-        <p class="sess-when">Sunday 6 December</p>        <h4>How AI can help SMBs grow revenue and scale their business</h4>
+      <article class="sess rv" style="--o:102">
+        <p class="sess-when">10:00 am</p>        <h4>How AI can help SMBs grow revenue and scale their business</h4>
         <p class="sess-note">A panel on using AI to generate more revenue for your business.</p>
         <div class="spk-row">
           <span class="spk"><span class="spk-av" data-i="AK" style="--av-tint:#8b4bbf"><img src="img/speaker-alifya-kagalwala.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Alifya Kagalwala</span></span>
@@ -1023,8 +1040,8 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
         </div>
       </article>
       <p class="sched-hour">11:00 am</p>
-      <article class="sess keynote rv">
-        <p class="sess-when">Saturday 5 December</p>
+      <article class="sess keynote rv" style="--o:3">
+        <p class="sess-when">11:00 am</p>
         <p class="sess-time">Keynote</p>        <h4>CEO Stories</h4>
         <p class="sess-note">Prominent CEOs share their journeys and what they learned along the way.</p>
         <div class="spk-row">
@@ -1035,8 +1052,8 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
            no session and no speaker — until 31 Oct, when Abeezar Tybejee was
            confirmed. Both days now run a CEO Stories keynote at 11:00; that is
            the committee's own framing, not a duplicated row. -->
-      <article class="sess keynote rv">
-        <p class="sess-when">Sunday 6 December</p>
+      <article class="sess keynote rv" style="--o:103">
+        <p class="sess-when">11:00 am</p>
         <p class="sess-time">Keynote</p>        <h4>CEO Stories</h4>
         <p class="sess-note">Prominent CEOs share their journeys and learnings &mdash; so you don&rsquo;t make the same mistake.</p>
         <div class="spk-row">
@@ -1044,8 +1061,8 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
         </div>
       </article>
       <p class="sched-hour">12:00 pm</p>
-      <article class="sess rv">
-        <p class="sess-when">Saturday 5 December</p>        <h4>Community and Public Leadership</h4>
+      <article class="sess rv" style="--o:4">
+        <p class="sess-when">12:00 pm</p>        <h4>Community and Public Leadership</h4>
         <p class="sess-note">A conversation on community priorities, civic engagement and the connections between business and public service.</p>
         <div class="spk-row">
           <span class="spk"><span class="spk-av" data-i="SH" style="--av-tint:#4a2470"><img src="img/speaker-saba-haider.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Saba Haider</span></span>
@@ -1054,8 +1071,8 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
       <!-- Created by the 3 Nov schedule. Turan Quettawala has the first half
            hour; the second is reserved by the committee and not yet public, so
            the to-be-announced line stands in for it. -->
-      <article class="sess rv">
-        <p class="sess-when">Sunday 6 December</p>        <h4>Insights from Manufacturers</h4>
+      <article class="sess rv" style="--o:104">
+        <p class="sess-when">12:00 pm</p>        <h4>Insights from Manufacturers</h4>
         <p class="sess-note">From 12:00 to 12:30, Turan Quettawala of Jafferjees on running a fifth-generation family manufacturer, and what two decades in global equity research taught him about it.</p>
         <p class="sess-tba">Further programme to be announced.</p>
         <div class="spk-row">
@@ -1063,8 +1080,8 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
         </div>
       </article>
       <p class="sched-hour">1:00 pm</p>
-      <article class="sess rv">
-        <p class="sess-when">Saturday 5 December</p>        <h4>Working with the Government: Practical Workshop</h4>
+      <article class="sess rv" style="--o:5">
+        <p class="sess-when">1:00 pm</p>        <h4>Working with the Government: Practical Workshop</h4>
         <p class="sess-note">Understand procurement opportunities, tips, guidelines, tender readiness and the steps toward competing for government contracts with Apex Accelerator (Ian Quan), Hussain Ezzy, Fakhruddin Cutlerywala and Huzaifa Hussain.</p>
         <div class="spk-row">
           <span class="spk"><span class="spk-av" data-i="IQ" style="--av-tint:#6b2f9e"><img src="img/speaker-ian-quan.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Ian Quan<small>APEX Accelerator</small></span></span>
@@ -1074,16 +1091,16 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
           <span class="spk"><span class="spk-av" data-i="SK" style="--av-tint:#4a2470"><img src="img/speaker-shabbir-katabji.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Shabbir Katabji</span></span>
         </div>
       </article>
-      <article class="sess rv">
-        <p class="sess-when">Sunday 6 December</p>        <h4>Sell Differently: the mindset shift that changes everything</h4>
+      <article class="sess rv" style="--o:105">
+        <p class="sess-when">1:00 pm</p>        <h4>Sell Differently: the mindset shift that changes everything</h4>
         <p class="sess-note">What if your biggest sales barrier isn&rsquo;t your strategy, your skills or your pipeline &mdash; but your mindset? How a shift in perspective can transform the way you sell, influence and win.</p>
         <div class="spk-row">
           <span class="spk"><span class="spk-av" data-i="TA" style="--av-tint:#4a2470"><img src="img/speaker-tasneem-talib-ali.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Tasneem Talib Ali</span></span>
         </div>
       </article>
       <p class="sched-hour">2:00 pm</p>
-      <article class="sess rv">
-        <p class="sess-when">Saturday 5 December</p>        <h4>Manufacturing Opportunities</h4>
+      <article class="sess rv" style="--o:6">
+        <p class="sess-when">2:00 pm</p>        <h4>Manufacturing Opportunities</h4>
         <p class="sess-note">How to get into manufacturing &mdash; tips, grants, tax breaks and more, with the Illinois Manufacturing Association. From 2:00 to 2:30, Willette LeGrant of the U.S. Small Business Administration covers SBA manufacturing resources, the Made in America Initiative, and the recent DoW&ndash;SBA memorandum of understanding to strengthen the industrial defense base.</p>
         <!-- She is the first named speaker on this slot; the Illinois
              Manufacturing Association side still has nobody attached, so this
@@ -1094,8 +1111,8 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
           <span class="spk"><span class="spk-av" data-i="WL" style="--av-tint:#8b4bbf"><img src="img/speaker-willette-legrant.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Willette LeGrant<small>U.S. Small Business Administration</small></span></span>
         </div>
       </article>
-      <article class="sess rv">
-        <p class="sess-when">Sunday 6 December</p>        <h4>Biz Lifecycle: from start to finish</h4>
+      <article class="sess rv" style="--o:106">
+        <p class="sess-when">2:00 pm</p>        <h4>Biz Lifecycle: from start to finish</h4>
         <p class="sess-note">Lessons on ideation, starting, sustaining, growing and scaling a business, including women&rsquo;s entrepreneurship.</p>
         <div class="spk-row">
           <span class="spk"><span class="spk-av" data-i="TK" style="--av-tint:#8b4bbf"><img src="img/speaker-tasneem-khokha.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Tasneem Khokha</span></span>
@@ -1106,12 +1123,12 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
         </div>
       </article>
       <p class="sched-hour">3:00 pm</p>
-      <article class="sess rv">
-        <p class="sess-when">Saturday 5 December</p>        <h4>Raffles and Networking Bingo</h4>
+      <article class="sess rv" style="--o:7">
+        <p class="sess-when">3:00 pm</p>        <h4>Raffles and Networking Bingo</h4>
         <p class="sess-note">Prize raffles and the networking bingo challenge to close the day.</p>
       </article>
-      <article class="sess rv">
-        <p class="sess-when">Sunday 6 December</p>        <h4>Raffles and Networking Bingo</h4>
+      <article class="sess rv" style="--o:107">
+        <p class="sess-when">3:00 pm</p>        <h4>Raffles and Networking Bingo</h4>
         <p class="sess-note">Prize raffles and the networking bingo challenge to close the day.</p>
       </article>
     </div>
