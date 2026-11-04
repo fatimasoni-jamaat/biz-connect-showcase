@@ -25,6 +25,39 @@ and do not need to be served (harmless if they are).
 
 ## Unreleased
 
+### Platinum sponsors take the slot under the hero
+Four sponsors — Ezzy Manufacturing, HarborTechAI, Kettle & Oak and Zee Signs —
+each a logo tile linked to their site with the domain printed underneath. A
+sponsor at the top tier is buying the most-seen position on the page, and the
+slot straight after the fold is it.
+
+**The keynote promo is moved, not deleted.** It went back to its original home
+after the programme, so Abidali's artwork and the page's only Register CTA
+attached to a named draw both survive. Deleting it would have traded the
+strongest conversion element on the page for a sponsor wall.
+
+Three details that took iterations, recorded so nobody undoes them:
+
+- **White tiles on the dark band.** Every logo supplied is dark artwork on a
+  light ground; on `#150c1d` they are empty rectangles.
+- **A fixed tile height, not `aspect-ratio`.** A grid item keeps
+  `min-height:auto`, so the box grows to whatever the logo wants and four tiles
+  end up four different heights — the one thing a sponsor wall must not do.
+- **`width/height:100%` + `object-fit:contain`, not `max-width/max-height`.**
+  `max-*` let an oversized logo push out of the fixed-height tile and over the
+  domain beneath it.
+
+Ezzy's logo arrived as a 1200×1200 file whose artwork occupied only y 467–732 —
+two thirds was padding, so `contain` fitted it by height and rendered it a third
+the size of the wordmarks beside it. Trimmed to its content bounds.
+
+Each URL was confirmed before listing: `ezzymanufacturing.com` redirects to
+`ezzymfg.com`, which is the form stored, and Zee Signs is at
+`zeesignschicago.com` — the `zeesigns.com` their wordmark implies does not
+resolve.
+
+Deploy: copy `index.html` and `img/`.
+
 ### Speaker bios collapse, so the cards stay even
 Four of twenty speakers have a bio and sixteen do not. Printed open, those four
 ran several times taller than their neighbours — and because grid rows stretch
