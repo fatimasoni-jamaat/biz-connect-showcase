@@ -25,6 +25,13 @@ and do not need to be served (harmless if they are).
 
 ## Unreleased
 
+### Kettle & Oak's company description
+Supplied by the committee, so it keeps their first-person voice where the rest
+of the exhibitor blurbs are neutral third-person. Their sheet comment was the
+single word "Platinum" — logistics, not a description — which the import
+rightly discarded; this replaces it. It lives in the import script, so the next
+sheet export keeps it. The floor now has 20 descriptions of 54.
+
 ### The mobile agenda groups by day, and the platinum badge carries
 On a phone the agenda collapsed to one column **still interleaved hour by
 hour** — 9am Saturday, 9am Sunday, 10am Saturday — which is correct across a
