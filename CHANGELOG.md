@@ -25,6 +25,25 @@ and do not need to be served (harmless if they are).
 
 ## Unreleased
 
+### Speaker bios collapse, so the cards stay even
+Four of twenty speakers have a bio and sixteen do not. Printed open, those four
+ran several times taller than their neighbours — and because grid rows stretch
+to the tallest card, every short card sharing a row with one gained a hole
+underneath it.
+
+The bios are not deleted; the committee supplied them and three arrived only
+last week. They sit behind a **"Read bio"** disclosure instead: one line when
+collapsed, so a row is even whether or not the cards in it have a bio, and
+expanding grows only the row it is in. The `summary` is restyled off its
+default triangle to a small uppercase label with a +/− affordance.
+
+Also fixed: a source comment on the Sunday 12:00 slot quoted the committee's
+internal "Locked for Org (TBD)" phrasing. Comments ship in page source, so that
+published the exact shorthand the previous release said it was withholding. The
+comment now says the slot is reserved and not yet public.
+
+Deploy: copy `index.html`.
+
 ### The committee's 3 November speaker schedule, reconciled
 Every open slot is filled and the programme now matches the committee's own
 document. **Speakers 18 → 20, sessions 8 → 12**, and no slot anywhere reads
