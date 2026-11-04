@@ -39,10 +39,25 @@ Two filenames did not match a speaker and were resolved by surname rather than
 guessed — "Muffadal khambaty" is Mufaddal Khambaty, and "Tasneen Ali" is
 Tasneem Talib Ali, where the other Tasneem on the roster is Tasneem Khokha.
 
-A sixth file, "Willette LeGrant, US-SBA", is an official portrait of somebody
-**not on the roster**, and is not added. There is no session, title or
-confirmation to attach to her, and inventing any of those is how a stranger
-ends up published as a speaker.
+### Willette LeGrant speaks on Manufacturing Opportunities
+The sixth portrait arrived unattached and was held back — there was no session
+or title to put with it. The committee supplied both on 4 November, so she goes
+in as the **first named speaker** on Saturday 2:00 pm, a slot that had read
+"Speakers to be announced" since launch.
+
+Her 2:00–2:30 segment is in the session note: SBA manufacturing resources, the
+Made in America Initiative, and the DoW–SBA memorandum of understanding on the
+industrial defense base. The to-be-announced line narrows from "Speakers" to
+"Further speakers" rather than disappearing — the Illinois Manufacturing
+Association half of that slot still has nobody attached.
+
+"US-SBA" is spelled out, because the page writes out Apex Accelerator and the
+Illinois Manufacturing Association too.
+
+Her card sits before Yusuf's rather than at the end, which would strand a plain
+card after Abeezar's full-width keynote row. That shifts the React page's tint
+rotation for Yusuf Hakim and Abeezar Tybejee, and both are updated here to
+match. Speakers 17 → 18.
 
 Deploy: copy `img/`. No markup changed — the page already referenced every one
 of these filenames and was falling back to initials.
