@@ -492,9 +492,6 @@ section{scroll-margin-top:calc(var(--parent-nav-h) + 78px)}
    a tall empty box next to a four-speaker panel. */
 .sess.open{display:flex;flex-direction:column;justify-content:center}
 .sess.open h4{color:var(--ink-3);font-size:1rem;margin-bottom:0}
-.draft-note{
-  margin-top:1.8rem;font-size:.82rem;color:var(--ink-3);border-left:2px solid var(--gold-line);padding-left:.9rem;
-}
 
 /* ---------- passes ---------- */
 .passes{display:grid;grid-template-columns:minmax(0,58rem);justify-content:center;gap:1.25rem}
@@ -792,8 +789,8 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
            the page. The import script prints this count every run — keep both
            this tile and the proof bullet below in step with it. -->
       <li><svg class="ic" aria-hidden="true"><use href="#i-store"></use></svg><b>54</b><span class="g-l">Exhibitors</span><span class="g-s">Signed so far, more to come</span></li>
-      <li><svg class="ic" aria-hidden="true"><use href="#i-users"></use></svg><b>18</b><span class="g-l">Speakers</span><span class="g-s">Confirmed so far, more to come</span></li>
-      <li><svg class="ic" aria-hidden="true"><use href="#i-mic"></use></svg><b>8</b><span class="g-l">Sessions</span><span class="g-s">Plus two keynotes</span></li>
+      <li><svg class="ic" aria-hidden="true"><use href="#i-users"></use></svg><b>20</b><span class="g-l">Speakers</span><span class="g-s">Confirmed so far, more to come</span></li>
+      <li><svg class="ic" aria-hidden="true"><use href="#i-mic"></use></svg><b>12</b><span class="g-l">Sessions</span><span class="g-s">Plus two keynotes</span></li>
       <li><svg class="ic" aria-hidden="true"><use href="#i-ticket"></use></svg><b>Free</b><span class="g-l">Entry</span><span class="g-s">Pre-registration required</span></li>
     </ul>
 
@@ -952,7 +949,6 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
         </div>
       </article>
     </div>
-    <p class="draft-note">Confirmed sessions and speakers are listed below. Remaining slots, including the keynotes, are announced as they are finalised.</p>
 
     <!-- h3, not a styled <p>: the timetable is a named sub-part of this
          section and belongs under the h2 in the document outline. -->
@@ -969,24 +965,26 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
       <p class="sess-dayhead">Saturday 5 December<small>8:30am &ndash; 3:30pm</small></p>
       <p class="sess-dayhead">Sunday 6 December<small>8:30am &ndash; 3:30pm</small></p>
       <p class="sched-hour">9:00 am</p>
-      <article class="sess open rv">
-        <p class="sess-when">Saturday 5 December</p>        <h4>Programme to be announced</h4>
-      </article>
-      <article class="sess open rv">
-        <p class="sess-when">Sunday 6 December</p>        <h4>Programme to be announced</h4>
-      </article>
-      <p class="sched-hour">10:00 am</p>
-      <article class="sess open rv">
-        <p class="sess-when">Saturday 5 December</p>        <h4>Programme to be announced</h4>
+      <article class="sess rv">
+        <p class="sess-when">Saturday 5 December</p>        <h4>Networking and Welcome</h4>
       </article>
       <article class="sess rv">
-        <p class="sess-when">Sunday 6 December</p>        <h4>How do I use AI in my business?</h4>
+        <p class="sess-when">Sunday 6 December</p>        <h4>Networking and Welcome</h4>
+      </article>
+      <p class="sched-hour">10:00 am</p>
+      <article class="sess rv">
+        <p class="sess-when">Saturday 5 December</p>        <h4>Founder Stories Roundtable</h4>
+        <p class="sess-note">Four business owners from Chicago share their entrepreneurial journey &mdash; the highs and the lows.</p>
+        <p class="sess-tba">Speakers to be announced.</p>
+      </article>
+      <article class="sess rv">
+        <p class="sess-when">Sunday 6 December</p>        <h4>How AI can help SMBs grow revenue and scale their business</h4>
         <p class="sess-note">A panel on using AI to generate more revenue for your business.</p>
         <div class="spk-row">
-          <span class="spk"><span class="spk-av" data-i="AK"><img src="img/speaker-alifya-kagalwala.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Alifya Kagalwala</span></span>
-          <span class="spk"><span class="spk-av" data-i="MK"><img src="img/speaker-mufaddal-khambaty.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Mufaddal Khambaty</span></span>
-          <span class="spk"><span class="spk-av" data-i="HP"><img src="img/speaker-hussain-presswala.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Hussain Presswala</span></span>
-          <span class="spk"><span class="spk-av" data-i="AN"><img src="img/speaker-abdeali-nagarwala.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Abdeali Nagarwala</span></span>
+          <span class="spk"><span class="spk-av" data-i="AK" style="--av-tint:#8b4bbf"><img src="img/speaker-alifya-kagalwala.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Alifya Kagalwala</span></span>
+          <span class="spk"><span class="spk-av" data-i="MK" style="--av-tint:#6b2f9e"><img src="img/speaker-mufaddal-khambaty.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Mufaddal Khambaty</span></span>
+          <span class="spk"><span class="spk-av" data-i="AN" style="--av-tint:#4a2470"><img src="img/speaker-abdeali-nagarwala.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Abdeali Nagarwala</span></span>
+          <span class="spk"><span class="spk-av" data-i="YH" style="--av-tint:#8b4bbf"><img src="img/speaker-yusuf-hakim.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Yusuf Hakim</span></span>
         </div>
       </article>
       <p class="sched-hour">11:00 am</p>
@@ -995,7 +993,7 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
         <p class="sess-time">Keynote</p>        <h4>CEO Stories</h4>
         <p class="sess-note">Prominent CEOs share their journeys and what they learned along the way.</p>
         <div class="spk-row">
-          <span class="spk"><span class="spk-av" data-i="AN"><img src="img/speaker-abidali-neemuchwala.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Abidali Neemuchwala<small>Tech Investor and Ex-CEO Wipro</small></span></span>
+          <span class="spk"><span class="spk-av" data-i="AN" style="--av-tint:#6b2f9e"><img src="img/speaker-abidali-neemuchwala.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Abidali Neemuchwala<small>Tech Investor and Ex-CEO Wipro</small></span></span>
         </div>
       </article>
       <!-- Read "Keynote Open" in the committee's draft — a keynote slot with
@@ -1007,7 +1005,7 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
         <p class="sess-time">Keynote</p>        <h4>CEO Stories</h4>
         <p class="sess-note">Prominent CEOs share their journeys and learnings &mdash; so you don&rsquo;t make the same mistake.</p>
         <div class="spk-row">
-          <span class="spk"><span class="spk-av" data-i="AT" style="--av-tint:#8b4bbf"><img src="img/speaker-abeezar-tybejee.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Abeezar Tybejee<small>CEO, Shipcom Wireless</small></span></span>
+          <span class="spk"><span class="spk-av" data-i="AT" style="--av-tint:#4a2470"><img src="img/speaker-abeezar-tybejee.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Abeezar Tybejee<small>CEO, Shipcom Wireless</small></span></span>
         </div>
       </article>
       <p class="sched-hour">12:00 pm</p>
@@ -1015,28 +1013,38 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
         <p class="sess-when">Saturday 5 December</p>        <h4>Community and Public Leadership</h4>
         <p class="sess-note">A conversation on community priorities, civic engagement and the connections between business and public service.</p>
         <div class="spk-row">
-          <span class="spk"><span class="spk-av" data-i="SH"><img src="img/speaker-saba-haider.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Saba Haider</span></span>
+          <span class="spk"><span class="spk-av" data-i="SH" style="--av-tint:#4a2470"><img src="img/speaker-saba-haider.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Saba Haider</span></span>
         </div>
       </article>
-      <article class="sess open rv">
-        <p class="sess-when">Sunday 6 December</p>        <h4>Programme to be announced</h4>
+      <!-- Created by the 3 Nov schedule. Turan Quettawala has the first half
+           hour; the second is "Locked for Org (TBD)" in the committee's
+           document, which is internal scheduling language and is not published
+           as such - the to-be-announced line covers it. -->
+      <article class="sess rv">
+        <p class="sess-when">Sunday 6 December</p>        <h4>Insights from Manufacturers</h4>
+        <p class="sess-note">From 12:00 to 12:30, Turan Quettawala of Jafferjees on running a fifth-generation family manufacturer, and what two decades in global equity research taught him about it.</p>
+        <p class="sess-tba">Further programme to be announced.</p>
+        <div class="spk-row">
+          <span class="spk"><span class="spk-av" data-i="TQ" style="--av-tint:#6b2f9e"><img src="img/speaker-turan-quettawala.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Turan Quettawala<small>Director, Jafferjees</small></span></span>
+        </div>
       </article>
       <p class="sched-hour">1:00 pm</p>
       <article class="sess rv">
-        <p class="sess-when">Saturday 5 December</p>        <h4>Selling to the Government: A Hands-On Workshop</h4>
+        <p class="sess-when">Saturday 5 December</p>        <h4>Working with the Government: Practical Workshop</h4>
         <p class="sess-note">Understand procurement opportunities, tips, guidelines, tender readiness and the steps toward competing for government contracts with Apex Accelerator (Ian Quan), Hussain Ezzy, Fakhruddin Cutlerywala and Huzaifa Hussain.</p>
         <div class="spk-row">
-          <span class="spk"><span class="spk-av" data-i="IQ" style="--av-tint:#6b2f9e"><img src="img/speaker-ian-quan.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Ian Quan</span></span>
+          <span class="spk"><span class="spk-av" data-i="IQ" style="--av-tint:#6b2f9e"><img src="img/speaker-ian-quan.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Ian Quan<small>APEX Accelerator</small></span></span>
           <span class="spk"><span class="spk-av" data-i="HE" style="--av-tint:#4a2470"><img src="img/speaker-hussain-ezzy.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Hussain Ezzy</span></span>
           <span class="spk"><span class="spk-av" data-i="FC" style="--av-tint:#8b4bbf"><img src="img/speaker-fakhruddin-cutlerywala.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Fakhruddin Cutlerywala</span></span>
           <span class="spk"><span class="spk-av" data-i="HH" style="--av-tint:#6b2f9e"><img src="img/speaker-huzaifa-hussain.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Huzaifa Hussain</span></span>
+          <span class="spk"><span class="spk-av" data-i="SK" style="--av-tint:#4a2470"><img src="img/speaker-shabbir-katabji.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Shabbir Katabji</span></span>
         </div>
       </article>
       <article class="sess rv">
         <p class="sess-when">Sunday 6 December</p>        <h4>Sell Differently: the mindset shift that changes everything</h4>
         <p class="sess-note">What if your biggest sales barrier isn&rsquo;t your strategy, your skills or your pipeline &mdash; but your mindset? How a shift in perspective can transform the way you sell, influence and win.</p>
         <div class="spk-row">
-          <span class="spk"><span class="spk-av" data-i="TA"><img src="img/speaker-tasneem-talib-ali.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Tasneem Talib Ali</span></span>
+          <span class="spk"><span class="spk-av" data-i="TA" style="--av-tint:#4a2470"><img src="img/speaker-tasneem-talib-ali.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Tasneem Talib Ali</span></span>
         </div>
       </article>
       <p class="sched-hour">2:00 pm</p>
@@ -1049,17 +1057,18 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
              Drop it once the IMA names arrive. -->
         <p class="sess-tba">Further speakers to be announced.</p>
         <div class="spk-row">
-          <span class="spk"><span class="spk-av" data-i="WL" style="--av-tint:#6b2f9e"><img src="img/speaker-willette-legrant.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Willette LeGrant<small>U.S. Small Business Administration</small></span></span>
+          <span class="spk"><span class="spk-av" data-i="WL" style="--av-tint:#8b4bbf"><img src="img/speaker-willette-legrant.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Willette LeGrant<small>U.S. Small Business Administration</small></span></span>
         </div>
       </article>
       <article class="sess rv">
         <p class="sess-when">Sunday 6 December</p>        <h4>Biz Lifecycle: from start to finish</h4>
         <p class="sess-note">Lessons on ideation, starting, sustaining, growing and scaling a business, including women&rsquo;s entrepreneurship.</p>
         <div class="spk-row">
-          <span class="spk"><span class="spk-av" data-i="TK"><img src="img/speaker-tasneem-khokha.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Tasneem Khokha</span></span>
-          <span class="spk"><span class="spk-av" data-i="MK"><img src="img/speaker-mustaali-kanch.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Mustaali Kanch</span></span>
-          <span class="spk"><span class="spk-av" data-i="MS"><img src="img/speaker-mustansir-saifuddin.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Mustansir Saifuddin</span></span>
-          <span class="spk"><span class="spk-av" data-i="HB"><img src="img/speaker-husaina-badshah.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Husaina Badshah</span></span>
+          <span class="spk"><span class="spk-av" data-i="TK" style="--av-tint:#8b4bbf"><img src="img/speaker-tasneem-khokha.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Tasneem Khokha</span></span>
+          <span class="spk"><span class="spk-av" data-i="MK" style="--av-tint:#4a2470"><img src="img/speaker-mustaali-kanchwala.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Mustaali Kanchwala</span></span>
+          <span class="spk"><span class="spk-av" data-i="MS" style="--av-tint:#4a2470"><img src="img/speaker-mustansir-saifuddin.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Mustansir Saifuddin</span></span>
+          <span class="spk"><span class="spk-av" data-i="HB" style="--av-tint:#8b4bbf"><img src="img/speaker-husaina-badshah.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Husaina Badshah</span></span>
+          <span class="spk"><span class="spk-av" data-i="MZ" style="--av-tint:#6b2f9e"><img src="img/speaker-munira-zahabi.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="spk-n">Munira Zahabi</span></span>
         </div>
       </article>
       <p class="sched-hour">3:00 pm</p>
@@ -1087,6 +1096,10 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
          takes the full first row. --av-tint is set per speaker; see the
          .spk-card-av rule. -->
     <div class="spk-grid rv">
+      <!-- GENERATED from SPEAKERS in tr-react-app. Order, titles, bios and
+           avatar tints all come from there, because tints are assigned by
+           array position and hand-maintaining them here is how the two sites
+           drift. Re-generate rather than hand-editing a card. -->
       <article class="spk-card key">
         <span class="spk-card-av" data-i="AN" style="--av-tint:#6b2f9e"><img src="img/speaker-abidali-neemuchwala.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
         <div class="spk-card-body"><p class="key-badge">Keynote</p><h4>Abidali Neemuchwala</h4><p class="spk-title">Tech Investor and Ex-CEO Wipro</p><p class="spk-session">CEO Stories</p></div>
@@ -1097,47 +1110,59 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
       </article>
       <article class="spk-card">
         <span class="spk-card-av" data-i="AK" style="--av-tint:#8b4bbf"><img src="img/speaker-alifya-kagalwala.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
-        <div class="spk-card-body"><h4>Alifya Kagalwala</h4><p class="spk-session">AI in your business</p></div>
+        <div class="spk-card-body"><h4>Alifya Kagalwala</h4><p class="spk-session">AI for SMBs</p></div>
       </article>
       <article class="spk-card">
         <span class="spk-card-av" data-i="MK" style="--av-tint:#6b2f9e"><img src="img/speaker-mufaddal-khambaty.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
-        <div class="spk-card-body"><h4>Mufaddal Khambaty</h4><p class="spk-session">AI in your business</p></div>
+        <div class="spk-card-body"><h4>Mufaddal Khambaty</h4><p class="spk-session">AI for SMBs</p></div>
       </article>
       <article class="spk-card">
-        <span class="spk-card-av" data-i="HP" style="--av-tint:#4a2470"><img src="img/speaker-hussain-presswala.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
-        <div class="spk-card-body"><h4>Hussain Presswala</h4><p class="spk-session">AI in your business</p></div>
+        <span class="spk-card-av" data-i="AN" style="--av-tint:#4a2470"><img src="img/speaker-abdeali-nagarwala.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="spk-card-body"><h4>Abdeali Nagarwala</h4><p class="spk-session">AI for SMBs</p></div>
       </article>
       <article class="spk-card">
-        <span class="spk-card-av" data-i="AN" style="--av-tint:#8b4bbf"><img src="img/speaker-abdeali-nagarwala.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
-        <div class="spk-card-body"><h4>Abdeali Nagarwala</h4><p class="spk-session">AI in your business</p></div>
+        <span class="spk-card-av" data-i="YH" style="--av-tint:#8b4bbf"><img src="img/speaker-yusuf-hakim.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="spk-card-body"><h4>Yusuf Hakim</h4><p class="spk-session">AI for SMBs</p></div>
       </article>
       <article class="spk-card">
         <span class="spk-card-av" data-i="IQ" style="--av-tint:#6b2f9e"><img src="img/speaker-ian-quan.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
-        <div class="spk-card-body"><h4>Ian Quan</h4><p class="spk-session">Selling to the Government</p></div>
+        <div class="spk-card-body"><h4>Ian Quan</h4><p class="spk-title">APEX Accelerator</p><p class="spk-session">Working with the Government</p><p class="spk-bio">Ian has over 20 years of government contracting and sales experience, and has helped his companies win over $100 million in contracts at federal and state level &mdash; including nationwide DHS, Navy, Army Corps, Air Force and TSA multi-year, fixed, IDIQ and BPA contracts.</p></div>
       </article>
       <article class="spk-card">
         <span class="spk-card-av" data-i="HE" style="--av-tint:#4a2470"><img src="img/speaker-hussain-ezzy.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
-        <div class="spk-card-body"><h4>Hussain Ezzy</h4><p class="spk-session">Selling to the Government</p></div>
+        <div class="spk-card-body"><h4>Hussain Ezzy</h4><p class="spk-session">Working with the Government</p></div>
       </article>
       <article class="spk-card">
         <span class="spk-card-av" data-i="FC" style="--av-tint:#8b4bbf"><img src="img/speaker-fakhruddin-cutlerywala.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
-        <div class="spk-card-body"><h4>Fakhruddin Cutlerywala</h4><p class="spk-session">Selling to the Government</p></div>
+        <div class="spk-card-body"><h4>Fakhruddin Cutlerywala</h4><p class="spk-session">Working with the Government</p></div>
       </article>
       <article class="spk-card">
         <span class="spk-card-av" data-i="HH" style="--av-tint:#6b2f9e"><img src="img/speaker-huzaifa-hussain.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
-        <div class="spk-card-body"><h4>Huzaifa Hussain</h4><p class="spk-session">Selling to the Government</p></div>
+        <div class="spk-card-body"><h4>Huzaifa Hussain</h4><p class="spk-session">Working with the Government</p></div>
+      </article>
+      <article class="spk-card">
+        <span class="spk-card-av" data-i="SK" style="--av-tint:#4a2470"><img src="img/speaker-shabbir-katabji.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="spk-card-body"><h4>Shabbir Katabji</h4><p class="spk-session">Working with the Government</p></div>
+      </article>
+      <article class="spk-card">
+        <span class="spk-card-av" data-i="WL" style="--av-tint:#8b4bbf"><img src="img/speaker-willette-legrant.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="spk-card-body"><h4>Willette LeGrant</h4><p class="spk-title">U.S. Small Business Administration</p><p class="spk-session">Manufacturing Opportunities</p></div>
+      </article>
+      <article class="spk-card">
+        <span class="spk-card-av" data-i="TQ" style="--av-tint:#6b2f9e"><img src="img/speaker-turan-quettawala.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="spk-card-body"><h4>Turan Quettawala</h4><p class="spk-title">Director, Jafferjees</p><p class="spk-session">Insights from Manufacturers</p><p class="spk-bio">A Director at Jafferjees, the Pakistani retail leather goods brand, where he is the fifth generation running the family business and oversees financial reporting and marketing strategy. Before returning to Karachi in 2019 he spent more than 20 years in global equity research &mdash; as an analyst at UBS Investment Bank and JP Morgan, then seventeen years at Scotiabank Global Banking and Markets in Toronto, where as Director, Equity Research he led coverage of the aerospace and transportation sectors. He is a CFA Charterholder with an MBA in Finance from the Institute of Business Administration, Karachi.</p></div>
       </article>
       <article class="spk-card">
         <span class="spk-card-av" data-i="TA" style="--av-tint:#4a2470"><img src="img/speaker-tasneem-talib-ali.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
-        <div class="spk-card-body"><h4>Tasneem Talib Ali</h4><p class="spk-session">Sell Differently</p></div>
+        <div class="spk-card-body"><h4>Tasneem Talib Ali</h4><p class="spk-title">Founder, Fervent Living</p><p class="spk-session">Sell Differently</p><p class="spk-bio">A leadership coach and trainer focused on building confident, resilient and growth-oriented people, through leadership and mindset training, one-to-one coaching and group programmes. She also holds a senior leadership position at Kantar, bringing over 20 years of experience across multiple markets to the blend of business acumen and practical coaching she teaches.</p></div>
       </article>
       <article class="spk-card">
         <span class="spk-card-av" data-i="TK" style="--av-tint:#8b4bbf"><img src="img/speaker-tasneem-khokha.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
         <div class="spk-card-body"><h4>Tasneem Khokha</h4><p class="spk-session">Biz Lifecycle</p></div>
       </article>
       <article class="spk-card">
-        <span class="spk-card-av" data-i="MK" style="--av-tint:#4a2470"><img src="img/speaker-mustaali-kanch.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
-        <div class="spk-card-body"><h4>Mustaali Kanch</h4><p class="spk-session">Biz Lifecycle</p></div>
+        <span class="spk-card-av" data-i="MK" style="--av-tint:#4a2470"><img src="img/speaker-mustaali-kanchwala.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="spk-card-body"><h4>Mustaali Kanchwala</h4><p class="spk-session">Biz Lifecycle</p></div>
       </article>
       <article class="spk-card">
         <span class="spk-card-av" data-i="MS" style="--av-tint:#4a2470"><img src="img/speaker-mustansir-saifuddin.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
@@ -1147,37 +1172,12 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
         <span class="spk-card-av" data-i="HB" style="--av-tint:#8b4bbf"><img src="img/speaker-husaina-badshah.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
         <div class="spk-card-body"><h4>Husaina Badshah</h4><p class="spk-session">Biz Lifecycle</p></div>
       </article>
-      <!-- Added 27 Oct without a slot yet — the session label is a placeholder.
-           He is deliberately absent from every AGENDA lineup until the
-           committee places him; a speaker on the grid with no session is
-           honest, a speaker in the wrong session is not. Tint is the one the
-           React page's rotation assigns him at index 15 — keep them matched. -->
-      <!-- Confirmed 4 Nov for Saturday 2:00–2:30. Placed before Yusuf rather
-           than appended: appending would strand a plain card after Abeezar's
-           full-width keynote row. Inserting here shifts the React page's tint
-           rotation for Yusuf and Abeezar only, and both are updated above and
-           below to match. "US-SBA" is spelled out because the page writes out
-           Apex Accelerator and the Illinois Manufacturing Association too. -->
       <article class="spk-card">
-        <span class="spk-card-av" data-i="WL" style="--av-tint:#6b2f9e"><img src="img/speaker-willette-legrant.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
-        <div class="spk-card-body"><h4>Willette LeGrant</h4><p class="spk-title">U.S. Small Business Administration</p><p class="spk-session">Manufacturing Opportunities</p></div>
+        <span class="spk-card-av" data-i="MZ" style="--av-tint:#6b2f9e"><img src="img/speaker-munira-zahabi.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="spk-card-body"><h4>Munira Zahabi</h4><p class="spk-session">Biz Lifecycle</p></div>
       </article>
-      <article class="spk-card">
-        <span class="spk-card-av" data-i="YH" style="--av-tint:#4a2470"><img src="img/speaker-yusuf-hakim.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
-        <div class="spk-card-body"><h4>Yusuf Hakim</h4><p class="spk-session">Session to be announced</p></div>
-      </article>
-      <!-- Sunday's keynote, confirmed 31 Oct. Last in the grid rather than
-           beside Abidali because .spk-card.key takes a full-width row wherever
-           it falls, so Saturday's keynote opens the grid and Sunday's closes
-           it — and because the React page assigns avatar tints by position,
-           where inserting him second would reshuffle 15 of 16 existing
-           speakers onto new tints, every one of them hand-written twice here.
-
-           He is the only speaker with a bio: Abidali's standing is made by the
-           promo band with his artwork and a Register CTA, and Abeezar has no
-           artwork, so his case has to be made in words. -->
       <article class="spk-card key">
-        <span class="spk-card-av" data-i="AT" style="--av-tint:#8b4bbf"><img src="img/speaker-abeezar-tybejee.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <span class="spk-card-av" data-i="AT" style="--av-tint:#4a2470"><img src="img/speaker-abeezar-tybejee.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
         <div class="spk-card-body"><p class="key-badge">Keynote</p><h4>Abeezar Tybejee</h4><p class="spk-title">CEO, Shipcom Wireless</p><p class="spk-session">CEO Stories</p><p class="spk-bio">With over 23 years of experience in startups, the Department of Defense and business development, Abeezar has built Shipcom into a trusted partner for agencies including the US Marines, US Navy, DHS, FEMA and more. Their flagship Shipcom AI platform powers the $14 billion supply chain of the US Navy&rsquo;s DDG 51 Class Aegis Program, ensures IoT logistics and cybersecurity for DHS-CBP operations on the US Southern Border, and supports FEMA&rsquo;s emergency supply chain needs.</p></div>
       </article>
     </div>
