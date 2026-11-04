@@ -25,6 +25,49 @@ and do not need to be served (harmless if they are).
 
 ## Unreleased
 
+### The committee's 3 November speaker schedule, reconciled
+Every open slot is filled and the programme now matches the committee's own
+document. **Speakers 18 → 20, sessions 8 → 12**, and no slot anywhere reads
+"Programme to be announced".
+
+**Added.** Shabbir Katabji to the government workshop, Munira Zahabi to Biz
+Lifecycle, and Turan Quettawala with the Sunday 12:00 slot the schedule
+creates ("Insights from Manufacturers"). Bios for Ian Quan, Tasneem Talib Ali
+and Turan Quettawala.
+
+**Removed.** Hussain Presswala, who appears nowhere in the 3 November document
+and was live on the AI panel until now. This is the only change that takes a
+named person off a published page.
+
+**Renamed.** "Selling to the Government" → "Working with the Government:
+Practical Workshop". "How do I use AI in my business?" → "How AI can help SMBs
+grow revenue and scale their business". "Mustaali Kanch" → "Mustaali
+Kanchwala", which the schedule spells in full.
+
+Yusuf Hakim finally has a session — the AI panel — so his card stops reading
+"Session to be announced".
+
+**Not published**, because it is internal scheduling language rather than
+programme: the three "Locked for Org (TBD)" blocks, the two parenthesised TBD
+names on Biz Lifecycle, and the MC/host list. The to-be-announced lines carry
+the same information without publishing the shorthand.
+
+**Held back.** Abidali's title, which the document reverts to "Co-Founder and
+Director at Dallas Venture Capital" against what has been live since 23
+October, and the Wipro bio attached to it. Pending a decision.
+
+The draft note above the agenda is gone — it promised that remaining slots and
+the keynotes would be announced as finalised, which describes a page that no
+longer exists.
+
+**The speaker grid is now generated** from the React app's SPEAKERS array
+rather than hand-written. Avatar tints are assigned by array position, so a
+single insertion reshuffles most of them, and hand-maintaining that here is
+exactly how the two sites drift. Agenda chips are tinted from the same source,
+which they never were before.
+
+Deploy: copy `index.html`.
+
 ### Five speaker portraits
 Mufaddal Khambaty and Tasneem Talib Ali stop showing initials; Abdeali
 Nagarwala, Alifya Kagalwala and Yusuf Hakim get replacements.
