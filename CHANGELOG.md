@@ -25,6 +25,28 @@ and do not need to be served (harmless if they are).
 
 ## Unreleased
 
+### Five speaker portraits
+Mufaddal Khambaty and Tasneem Talib Ali stop showing initials; Abdeali
+Nagarwala, Alifya Kagalwala and Yusuf Hakim get replacements.
+
+All squared and resized to 360×360 to match every other portrait. The crops are
+**not** centred: three originals are portrait or landscape orientation with the
+face high or off-centre, and a naive centre crop takes the top off someone's
+head. Each was framed by eye and checked at both 64px circular and card size
+before committing.
+
+Two filenames did not match a speaker and were resolved by surname rather than
+guessed — "Muffadal khambaty" is Mufaddal Khambaty, and "Tasneen Ali" is
+Tasneem Talib Ali, where the other Tasneem on the roster is Tasneem Khokha.
+
+A sixth file, "Willette LeGrant, US-SBA", is an official portrait of somebody
+**not on the roster**, and is not added. There is no session, title or
+confirmation to attach to her, and inventing any of those is how a stranger
+ends up published as a speaker.
+
+Deploy: copy `img/`. No markup changed — the page already referenced every one
+of these filenames and was falling back to initials.
+
 ### Sunday's keynote is Abeezar Tybejee
 The Sunday 11:00 slot read "Keynote Open" in the committee's draft — a keynote
 with no session and no speaker — and this page carried it as a pending card
