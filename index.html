@@ -422,10 +422,16 @@ section{scroll-margin-top:calc(var(--parent-nav-h) + 78px)}
 .spk-card.key .spk-card-av{width:96px;height:96px;font-size:1.7rem}
 .spk-card.key h4{font-size:clamp(1.25rem,2.6vw,1.55rem)}
 .spk-card.key .spk-title{font-size:.92rem;max-width:62ch}
-/* only on the keynote card that has no artwork. capped at 70ch: the card spans
-   the full grid width, and a 110-word paragraph running the whole way across a
-   desktop viewport is a line nobody tracks back from. */
-.spk-bio{font-size:.86rem;color:var(--ink-2);line-height:1.55;margin-top:.7rem;max-width:70ch}
+/* bios are collapsed. four of twenty speakers have one, and open they made
+   those cards several times taller than their neighbours — grid rows stretch
+   to the tallest card, so one long bio left a hole beside every short card. */
+.spk-more{margin-top:.55rem}
+.spk-more>summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:.3rem;font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--violet);border-bottom:1px solid var(--rule-strong);padding-bottom:1px}
+.spk-more>summary::-webkit-details-marker{display:none}
+.spk-more>summary::after{content:"+";font-size:.9rem;line-height:1}
+.spk-more[open]>summary::after{content:"\2212"}
+.spk-more>summary:hover{border-bottom-color:var(--violet)}
+.spk-more>p{font-size:.86rem;color:var(--ink-2);line-height:1.55;margin-top:.6rem;max-width:70ch}
 .key-badge{display:inline-block;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--gold);border:1px solid var(--gold-line);padding:.18rem .55rem;border-radius:2px;margin-bottom:.5rem}
 @media (max-width:560px){.spk-card.key .spk-card-av{width:72px;height:72px;font-size:1.3rem}}
 /* Heads the timetable. Was .lineup-lead — a .74rem uppercase label reading
@@ -1017,9 +1023,8 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
         </div>
       </article>
       <!-- Created by the 3 Nov schedule. Turan Quettawala has the first half
-           hour; the second is "Locked for Org (TBD)" in the committee's
-           document, which is internal scheduling language and is not published
-           as such - the to-be-announced line covers it. -->
+           hour; the second is reserved by the committee and not yet public, so
+           the to-be-announced line stands in for it. -->
       <article class="sess rv">
         <p class="sess-when">Sunday 6 December</p>        <h4>Insights from Manufacturers</h4>
         <p class="sess-note">From 12:00 to 12:30, Turan Quettawala of Jafferjees on running a fifth-generation family manufacturer, and what two decades in global equity research taught him about it.</p>
@@ -1126,7 +1131,7 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
       </article>
       <article class="spk-card">
         <span class="spk-card-av" data-i="IQ" style="--av-tint:#6b2f9e"><img src="img/speaker-ian-quan.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
-        <div class="spk-card-body"><h4>Ian Quan</h4><p class="spk-title">APEX Accelerator</p><p class="spk-session">Working with the Government</p><p class="spk-bio">Ian has over 20 years of government contracting and sales experience, and has helped his companies win over $100 million in contracts at federal and state level &mdash; including nationwide DHS, Navy, Army Corps, Air Force and TSA multi-year, fixed, IDIQ and BPA contracts.</p></div>
+        <div class="spk-card-body"><h4>Ian Quan</h4><p class="spk-title">APEX Accelerator</p><p class="spk-session">Working with the Government</p><details class="spk-more"><summary>Read bio</summary><p>Ian has over 20 years of government contracting and sales experience, and has helped his companies win over $100 million in contracts at federal and state level &mdash; including nationwide DHS, Navy, Army Corps, Air Force and TSA multi-year, fixed, IDIQ and BPA contracts.</p></details></div>
       </article>
       <article class="spk-card">
         <span class="spk-card-av" data-i="HE" style="--av-tint:#4a2470"><img src="img/speaker-hussain-ezzy.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
@@ -1150,11 +1155,11 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
       </article>
       <article class="spk-card">
         <span class="spk-card-av" data-i="TQ" style="--av-tint:#6b2f9e"><img src="img/speaker-turan-quettawala.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
-        <div class="spk-card-body"><h4>Turan Quettawala</h4><p class="spk-title">Director, Jafferjees</p><p class="spk-session">Insights from Manufacturers</p><p class="spk-bio">A Director at Jafferjees, the Pakistani retail leather goods brand, where he is the fifth generation running the family business and oversees financial reporting and marketing strategy. Before returning to Karachi in 2019 he spent more than 20 years in global equity research &mdash; as an analyst at UBS Investment Bank and JP Morgan, then seventeen years at Scotiabank Global Banking and Markets in Toronto, where as Director, Equity Research he led coverage of the aerospace and transportation sectors. He is a CFA Charterholder with an MBA in Finance from the Institute of Business Administration, Karachi.</p></div>
+        <div class="spk-card-body"><h4>Turan Quettawala</h4><p class="spk-title">Director, Jafferjees</p><p class="spk-session">Insights from Manufacturers</p><details class="spk-more"><summary>Read bio</summary><p>A Director at Jafferjees, the Pakistani retail leather goods brand, where he is the fifth generation running the family business and oversees financial reporting and marketing strategy. Before returning to Karachi in 2019 he spent more than 20 years in global equity research &mdash; as an analyst at UBS Investment Bank and JP Morgan, then seventeen years at Scotiabank Global Banking and Markets in Toronto, where as Director, Equity Research he led coverage of the aerospace and transportation sectors. He is a CFA Charterholder with an MBA in Finance from the Institute of Business Administration, Karachi.</p></details></div>
       </article>
       <article class="spk-card">
         <span class="spk-card-av" data-i="TA" style="--av-tint:#4a2470"><img src="img/speaker-tasneem-talib-ali.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
-        <div class="spk-card-body"><h4>Tasneem Talib Ali</h4><p class="spk-title">Founder, Fervent Living</p><p class="spk-session">Sell Differently</p><p class="spk-bio">A leadership coach and trainer focused on building confident, resilient and growth-oriented people, through leadership and mindset training, one-to-one coaching and group programmes. She also holds a senior leadership position at Kantar, bringing over 20 years of experience across multiple markets to the blend of business acumen and practical coaching she teaches.</p></div>
+        <div class="spk-card-body"><h4>Tasneem Talib Ali</h4><p class="spk-title">Founder, Fervent Living</p><p class="spk-session">Sell Differently</p><details class="spk-more"><summary>Read bio</summary><p>A leadership coach and trainer focused on building confident, resilient and growth-oriented people, through leadership and mindset training, one-to-one coaching and group programmes. She also holds a senior leadership position at Kantar, bringing over 20 years of experience across multiple markets to the blend of business acumen and practical coaching she teaches.</p></details></div>
       </article>
       <article class="spk-card">
         <span class="spk-card-av" data-i="TK" style="--av-tint:#8b4bbf"><img src="img/speaker-tasneem-khokha.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
@@ -1178,7 +1183,7 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
       </article>
       <article class="spk-card key">
         <span class="spk-card-av" data-i="AT" style="--av-tint:#4a2470"><img src="img/speaker-abeezar-tybejee.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
-        <div class="spk-card-body"><p class="key-badge">Keynote</p><h4>Abeezar Tybejee</h4><p class="spk-title">CEO, Shipcom Wireless</p><p class="spk-session">CEO Stories</p><p class="spk-bio">With over 23 years of experience in startups, the Department of Defense and business development, Abeezar has built Shipcom into a trusted partner for agencies including the US Marines, US Navy, DHS, FEMA and more. Their flagship Shipcom AI platform powers the $14 billion supply chain of the US Navy&rsquo;s DDG 51 Class Aegis Program, ensures IoT logistics and cybersecurity for DHS-CBP operations on the US Southern Border, and supports FEMA&rsquo;s emergency supply chain needs.</p></div>
+        <div class="spk-card-body"><p class="key-badge">Keynote</p><h4>Abeezar Tybejee</h4><p class="spk-title">CEO, Shipcom Wireless</p><p class="spk-session">CEO Stories</p><details class="spk-more"><summary>Read bio</summary><p>With over 23 years of experience in startups, the Department of Defense and business development, Abeezar has built Shipcom into a trusted partner for agencies including the US Marines, US Navy, DHS, FEMA and more. Their flagship Shipcom AI platform powers the $14 billion supply chain of the US Navy&rsquo;s DDG 51 Class Aegis Program, ensures IoT logistics and cybersecurity for DHS-CBP operations on the US Southern Border, and supports FEMA&rsquo;s emergency supply chain needs.</p></details></div>
       </article>
     </div>
 
