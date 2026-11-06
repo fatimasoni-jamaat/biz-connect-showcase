@@ -25,6 +25,41 @@ and do not need to be served (harmless if they are).
 
 ## Unreleased
 
+### Kettle & Oak's company description
+Supplied by the committee, so it keeps their first-person voice where the rest
+of the exhibitor blurbs are neutral third-person. Their sheet comment was the
+single word "Platinum" — logistics, not a description — which the import
+rightly discarded; this replaces it. It lives in the import script, so the next
+sheet export keeps it. The floor now has 20 descriptions of 54.
+
+### The mobile agenda groups by day, and the platinum badge carries
+On a phone the agenda collapsed to one column **still interleaved hour by
+hour** — 9am Saturday, 9am Sunday, 10am Saturday — which is correct across a
+shared time axis and nonsense read as a single list. It now runs **all of
+Saturday, then all of Sunday**.
+
+No second DOM to do it. Desktop genuinely needs the interleaved order, because
+that is what puts 11am level with 11am in a three-column grid; mobile reorders
+with `order`, fed by a `--o` custom property set per cell as
+`dayIndex * 100 + hourIndex`. The two day headings, hidden on mobile until now,
+take `--o` 0 and 100 and become the thing that separates the groups.
+
+The hour rail goes with it, so `.sess-when` swaps from naming the day to naming
+the hour — the day is the heading now, and *when* is the one thing each card
+still has to say. The old note that grouping by day "would need a different DOM
+order than the desktop grid" is gone; it does not.
+
+Desktop is untouched: still two columns of seven, rail and day headings
+visible, hour-on-card hidden.
+
+**The platinum eyebrow becomes a badge.** At the page's default eyebrow size it
+read as a caption on the heading rather than a billing, which is the wrong
+weight for the one line stating what the top tier bought. Gold rule, gold tint
+and more tracking — borrowing the `.key-badge` treatment the keynote cards
+already use — and the heading goes up to `clamp(2rem, 4.4vw, 3rem)`.
+
+Deploy: copy `index.html`.
+
 ### Platinum sponsors take the slot under the hero
 Four sponsors — Ezzy Manufacturing, HarborTechAI, Kettle & Oak and Zee Signs —
 each a logo tile linked to their site with the domain printed underneath. A
