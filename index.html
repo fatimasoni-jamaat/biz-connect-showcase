@@ -831,13 +831,21 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
     </div>
 
     <ul class="glance-grid hero-stats rv">
-      <!-- 53 is the number of cards in the #exhibitors section below, i.e. the
-           rows the committee's sheet marks Paid or Confirmed-not-paid. It said
-           80 until 23 Oct, which no longer survived putting the actual floor on
-           the page. The import script prints this count every run — keep both
-           this tile and the proof bullet below in step with it. -->
-      <li><svg class="ic" aria-hidden="true"><use href="#i-store"></use></svg><b>54</b><span class="g-l">Exhibitors</span><span class="g-s">Signed so far, more to come</span></li>
-      <li><svg class="ic" aria-hidden="true"><use href="#i-users"></use></svg><b>20</b><span class="g-l">Speakers</span><span class="g-s">Confirmed so far, more to come</span></li>
+      <!-- 65 is the number of cards in the #exhibitors section below, i.e. the
+           rows the committee's sheet marks Paid. It counted Confirmed-not-paid
+           too until 9 Nov, and said 80 until 23 Oct — which no longer survived
+           putting the actual floor on the page. The import script prints this
+           count every run; keep this tile and the proof bullet below in step
+           with it. The React page derives both from the array instead, so this
+           file is the only one where they can drift.
+
+           Speakers is 21, the length of SPEAKERS on the React page. It has gone
+           stale twice: 18 when the 3 Nov schedule landed, 20 when Demitrus T.
+           Evans joined on 9 Nov. Sessions is 12 — the named non-keynote rows in
+           the agenda, 12 of 14, the two keynotes being advertised separately by
+           the tile's own subtitle. Re-count both after any agenda change. -->
+      <li><svg class="ic" aria-hidden="true"><use href="#i-store"></use></svg><b>65</b><span class="g-l">Exhibitors</span><span class="g-s">Signed so far, more to come</span></li>
+      <li><svg class="ic" aria-hidden="true"><use href="#i-users"></use></svg><b>21</b><span class="g-l">Speakers</span><span class="g-s">Confirmed so far, more to come</span></li>
       <li><svg class="ic" aria-hidden="true"><use href="#i-mic"></use></svg><b>12</b><span class="g-l">Sessions</span><span class="g-s">Plus two keynotes</span></li>
       <li><svg class="ic" aria-hidden="true"><use href="#i-ticket"></use></svg><b>Free</b><span class="g-l">Entry</span><span class="g-s">Pre-registration required</span></li>
     </ul>
@@ -856,7 +864,7 @@ footer{background:var(--surface-2);border-top:1px solid var(--rule);padding-bloc
     <ul class="hero-proof rv">
       <li>
         <svg class="ic" aria-hidden="true"><use href="#i-factory"></use></svg>
-        <span><strong>54 exhibitors and more to come</strong>, across eight industry pavilions &mdash; with a dedicated focus on <strong>manufacturing</strong>.</span>
+        <span><strong>65 exhibitors and more to come</strong>, across eight industry pavilions &mdash; with a dedicated focus on <strong>manufacturing</strong>.</span>
       </li>
       <li>
         <svg class="ic" aria-hidden="true"><use href="#i-mic"></use></svg>
