@@ -25,6 +25,13 @@ and do not need to be served (harmless if they are).
 
 ## Unreleased
 
+### New photos for Munira Zahabi and Ammar Saifuddin
+Both speaker headshots replaced with newer photos, cropped square around the
+face at 360×360 like the others. Same filenames, so no markup changed.
+
+Deploy: copy `img/speaker-munira-zahabi.jpg` and `img/speaker-ammar-saifuddin.jpg`.
+Nothing else changed.
+
 ### Parwaaz Consulting: new logo, their own words, and a link
 All three supplied by Mansoor.
 
