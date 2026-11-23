@@ -25,6 +25,38 @@ and do not need to be served (harmless if they are).
 
 ## Unreleased
 
+### Six confirmed exhibitors added: the floor is 86
+The page now carries every business the committee's sheet counts as
+Confirmed, not only the ones marked Paid. On 23 November the sheet's Summary
+tab showed 85 confirmed (79 Paid, 6 "Confirmed not paid") and its
+"exhibitors 4 mktg" tab listed the same 85. The six that were missing:
+
+- AL RAWI (Creative Services)
+- HAVA HVAC (Real Estate & Construction)
+- Raihaan Oudh (Manufacturing)
+- Scentivana (Retail & Consumer Goods)
+- SpotGenius (Technology & Innovation)
+- The Ink Well (Creative Services)
+
+**This reverses the paid-only rule of 9 November**, on Hani's instruction.
+None of the six has paid yet, so each is a booking that has not completed. If
+one drops out, the next import removes its card when the sheet's status
+changes.
+
+The page shows **86**, one more than the sheet, because Medtelligent stays:
+it was Paid on 11 November and its status cell now holds a sponsorship note.
+
+Scentivana keeps the description it had before 9 November, and SpotGenius its
+logo and link. The other four are name and pavilion only. Names are as the
+sheet has them, capitals included. The hero tile, the proof bullet and the
+pavilion counts all follow.
+
+Read from the sheet in a browser rather than from a CSV export, so the sheet's
+"Additional Comments" for these six were not seen; a later import from an
+export may add a description to some of them.
+
+Deploy: copy `index.html`. Nothing else changed.
+
 ### Demitrus T. Evans: TEIL Firms added to her affiliation
 Her company name now follows the Export Council wherever her affiliation is
 shown, on Hani's instruction. The agenda row under "Insights for
