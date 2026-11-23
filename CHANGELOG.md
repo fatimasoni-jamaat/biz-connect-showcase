@@ -34,6 +34,17 @@ Council, TEIL Firms". The session description and her bio are unchanged.
 
 Deploy: copy `index.html`. Nothing else changed.
 
+### Huzaifa Hussain removed from the speakers
+Removed on Hani's instruction. He is gone from the "Working with the
+Government: Practical Workshop" agenda card, from that session's description
+and from the speaker grid, and the hero's Speakers tile drops from 23 to 22.
+
+Avatar tints are assigned by position in the speaker list, so the eleven
+speakers after him each moved one tint along, matching what the React page
+now derives. Tints only show where a photo fails to load.
+
+Deploy: copy `index.html`. Nothing else changed.
+
 ### The 20 November sheet: 80 paid exhibitors
 Exhibitors 71 to 80, from the committee's sheet of 20 November. Still
 paid-only. Nine businesses are new to the floor, all with a Paid row and a
