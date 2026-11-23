@@ -25,6 +25,14 @@ and do not need to be served (harmless if they are).
 
 ## Unreleased
 
+### Ammar Saifuddin: a new photo again
+Supplied by Hani on 23 November, replacing the one that went in on
+18 November. Cropped square around the face at 360×360 like the others. Same
+filename, so no markup changed; a returning visitor may see the old photo
+until their browser's cached copy expires.
+
+Deploy: copy `img/speaker-ammar-saifuddin.jpg`. Nothing else changed.
+
 ### Six confirmed exhibitors added: the floor is 86
 The page now carries every business the committee's sheet counts as
 Confirmed, not only the ones marked Paid. On 23 November the sheet's Summary
