@@ -25,6 +25,15 @@ and do not need to be served (harmless if they are).
 
 ## Unreleased
 
+### Demitrus T. Evans: TEIL Firms added to her affiliation
+Her company name now follows the Export Council wherever her affiliation is
+shown, on Hani's instruction. The agenda row under "Insights for
+Manufacturers" reads **Illinois District Export Council, TEIL Firms**, and her
+speaker card reads "International business attorney; Illinois District Export
+Council, TEIL Firms". The session description and her bio are unchanged.
+
+Deploy: copy `index.html`. Nothing else changed.
+
 ### The 20 November sheet: 80 paid exhibitors
 Exhibitors 71 to 80, from the committee's sheet of 20 November. Still
 paid-only. Nine businesses are new to the floor, all with a Paid row and a
