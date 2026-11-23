@@ -25,6 +25,15 @@ and do not need to be served (harmless if they are).
 
 ## Unreleased
 
+### Demitrus T. Evans: TEIL Firms added to her affiliation
+Her company name now follows the Export Council wherever her affiliation is
+shown, on Hani's instruction. The agenda row under "Insights for
+Manufacturers" reads **Illinois District Export Council, TEIL Firms**, and her
+speaker card reads "International business attorney; Illinois District Export
+Council, TEIL Firms". The session description and her bio are unchanged.
+
+Deploy: copy `index.html`. Nothing else changed.
+
 ### Huzaifa Hussain removed from the speakers
 Removed on Hani's instruction. He is gone from the "Working with the
 Government: Practical Workshop" agenda card, from that session's description
